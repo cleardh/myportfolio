@@ -1,6 +1,8 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Navbar from '../components/Navbar'
 
 export default function Home() {
   return (
@@ -12,6 +14,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Navbar />
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -20,6 +23,8 @@ export default function Home() {
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+        <Link href='/resume'>Go to resume</Link>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
