@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Resume from '../components/Resume';
 import Welcome from '../components/Welcome';
+import About from '../components/About';
 
 export default function Home() {
   useEffect(() => {
@@ -18,7 +19,9 @@ export default function Home() {
       </Head>
 
       <main>
+        <div className='background'></div>
         <Welcome />
+        <About />
         <Resume />
       </main>
 
