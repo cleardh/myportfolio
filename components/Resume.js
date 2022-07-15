@@ -108,19 +108,19 @@ const Resume = () => {
                                 <div className='resumeAccomplishmentsDetails'>
                                     <div className='resumeAccomplishmentsTitle'>
                                         <Icon icon='star' style={{ marginRight: 5 }} />
-                                        <Link passHref href='https://employee-time-off-tracker.herokuapp.com'>
-                                            <a className='resumeLink' target='_blank'>Employee Time-off Tracker</a>
+                                        <Link passHref href='https://irisbooth.com/'>
+                                            <a className='resumeLink' target='_blank'>Touchless App</a>
                                         </Link>
                                     </div>
                                         <ul className='resumeAccomplishmentsUl'>
                                             <li className='resumeListItems'>
-                                                An HR software specialized in employee time-off management using MERN Stack
+                                                A remote controller app for kiosk
                                             </li>
                                             <li className='resumeListItems'>
-                                                Led the team as the project manager/lead developer in an agile development environment
+                                                Utilized AWS API Gateway WebSocket API and Lambda in association with Node.js and React
                                             </li>
                                             <li className='resumeListItems'>
-                                                Implemented authentication using Google OAuth 2.0 as well as calendar events interactions with Google Calendar
+                                                Can be access by scanning a QR code on kiosk
                                             </li>
                                         </ul>
                                 </div>
