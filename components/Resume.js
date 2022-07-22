@@ -11,11 +11,15 @@ const Resume = () => {
     const resumeToPrint = useRef();
     const [zoomFactor, setZoomFactor] = useState('100%');
     useEffect(() => {
+        resizeResume();
+        window.addEventListener('resize', resizeResume);
+    }, []);
+    const resizeResume = () => {
         let zoom;
         if (typeof window === 'undefined' || window.outerWidth > 1000) zoom = '100%';
         else zoom = `${window.outerWidth / 1000 * 100}%`;
         setZoomFactor(zoom);
-    }, []);
+    }
     const downloadPdf = () => {
         html2canvas(resumeToPrint.current, { scale: 3 }).then(canvas => {
             const imgData = canvas.toDataURL('image/png');
@@ -46,8 +50,8 @@ const Resume = () => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px 0px'}}>
             <div style={{ width: '100vw', display: 'flex', justifyContent: 'center' }}>
-                <Button type='button' rightIcon='download' className='resumeDownload' intent={Intent.PRIMARY} onClick={downloadPdf}>
-                    <span style={{ fontSize: 20, marginRight: 5 }}>Download my resume</span>
+                <Button type='button' rightIcon='download' className='resumeDownload' intent={Intent.NONE} onClick={downloadPdf}>
+                    <span style={{ fontSize: 20, marginRight: 5, color: '#000' }}>Download my resume</span>
                 </Button>
             </div>
             <div className='resumeContainer' ref={resumeToPrint} style={{ zoom: zoomFactor }}>

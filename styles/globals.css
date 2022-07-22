@@ -24,74 +24,121 @@ body {
 
 .container {
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px;
 }
 
+.welcome-wrapper {
+  transform: scale(0.4);
+}
+
+.aboutWrapper {
+  zoom: 40%;
+}
+
+@media only screen and (min-width: 500px) {
+  .welcome-wrapper {
+    transform: scale(0.6);
+  }
+
+  .aboutWrapper {
+    zoom: 50%;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .aboutWrapper {
+    zoom: 65%;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .welcome-wrapper {
+    transform: scale(0.8);
+  }
+
+  .aboutWrapper {
+    zoom: 80%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .welcome-wrapper {
+    transform: scale(1);
+  }
+
+  .aboutWrapper {
+    zoom: 100%;
+  }
+}
+
 .welcomeMessage {
+  position: relative;
   animation: 5s welcome ease-in-out infinite;
 }
 
 @keyframes welcome {
   0% {
-    transform: translateY(0px);
+    bottom: 0px;
     color: #000;
   }
 
   10% {
-    transform: translateY(0px);
+    bottom: 0px;
     color: #000;
   }
 
   18% {
-    transform: translateY(-30px);
+    bottom: 30px;
     color: #777;
   }
 
   23% {
-    transform: translateY(0px);
+    bottom: 0px;
     color: #000;
   }
 
   100% {
-    transform: translateY(0px);
+    bottom: 0px;
     color: #000;
   }
 }
 
-/* Welcome */
+/* About */
 
 .aboutWrapper {
   font-size: 30px;
   word-break: break-word;
-  width: 70%;
-  height: 50%;
+  width: 100%;
+  height: 400px;
   text-shadow: 2px 2px grey;
   text-align: left;
   line-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .aboutLeft,
 .aboutRight {
-  float: left;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
   height: 100%;
 }
 
 .aboutRight {
-  float: right;
+  margin-left: 100px;
 }
 
 .aboutLeftWrapper {
-  width: 60%;
-  height: 60%;
-  overflow: hidden;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
+  overflow: hidden;
   box-shadow: 0px 0px 25px 5px grey;
 }
 
@@ -127,6 +174,23 @@ body {
   font-weight: bold;
 }
 
+/* Achievements */
+.achievements-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px
+}
+
+.achievements-title {
+  width: 100%;
+  text-align: left;
+  padding-left: 100px;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
 /* Resume */
 
 .resumeDownload {
@@ -147,6 +211,16 @@ body {
   background: #ddd;
 }
 
+@media only screen and (max-width: 600px) {
+  .resumeDownload {
+    zoom: 80%;
+  }
+
+  .footer-right {
+    display: none;
+  }
+}
+
 .resumeContainer {
   width: 1000px;
   height: calc(1.414516129032258 * 1000px);
@@ -157,6 +231,16 @@ body {
   margin-top: 40px;
   background: #f5f5f5;
   box-shadow: 5px 5px 10px grey;
+}
+
+@media only screen and (max-width: 500px) {
+  .resumeContainer {
+    height: calc(1.414516129032258 * 1000px + 200px);
+  }
+
+  .aboutLeftWrapper {
+    border-radius: 0;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -266,6 +350,45 @@ body {
 
 .resumeLink:hover {
   text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  font-size: 20px;
+  width: 70vw;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-left,
+.footer-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.footer-left-elements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  margin-top: 30px;
+}
+
+.footer-right {
+  font-style: italic;
 }
 
 /* -------------------------- */
