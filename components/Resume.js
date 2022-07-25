@@ -27,7 +27,8 @@ const Resume = () => {
             const pdfWidth = pdf.internal.pageSize.width;
             const pdfHeight = pdf.internal.pageSize.height;
             pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight, '', 'FAST');
-            pdf.save('donghakang_resume.pdf');
+            // pdf.save('donghakang_resume.pdf');
+            pdf.output('dataurlnewwindow');
         }).catch(err => console.log(err));
     }
     const getSkill = (level) => {
