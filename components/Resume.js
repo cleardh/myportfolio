@@ -156,35 +156,59 @@ const Resume = () => {
                             <div className='resumeSectionTitle'>Contact</div>
                             <hr />
                             <div className='resumeSideItemTitle'>
-                                <Icon icon='home' />
-                                <span style={{ marginLeft: 5 }}>Address</span>
+                                <Link passHref href='https://www.google.com/maps/place/North,+251+Margaret+Ave,+Kitchener,+ON+N2H+4J6/@43.4631437,-80.4967428,17z/data=!3m1!4b1!4m5!3m4!1s0x882bf4861270928d:0xc98adbc032bfeb73!8m2!3d43.4631398!4d-80.4945541'>
+                                    <a target='_blank'>
+                                        <Icon icon='home' />
+                                        <span style={{ marginLeft: 5 }}>Address</span>
+                                    </a>
+                                </Link>
                             </div>
                             <div>251 Margaret Ave, Kitchener, ON, N2H 4J6</div>
                             <div className='resumeSideItemTitle'>
-                                <Icon icon='phone' />
-                                <span style={{ marginLeft: 5 }}>Phone</span>
+                                <Link passHref href='tel:519-505-5699'>
+                                    <a>
+                                        <Icon icon='phone' />
+                                        <span style={{ marginLeft: 5 }}>Phone</span>
+                                    </a>
+                                </Link>
                             </div>
                             <div>519-505-5699</div>
                             <div className='resumeSideItemTitle'>
-                                <Icon icon='envelope' />
-                                <span style={{ marginLeft: 5 }}>Email</span>
+                                <Link passHref href='mailto:cleardh@hotmail.com'>
+                                    <a>
+                                        <Icon icon='envelope' />
+                                        <span style={{ marginLeft: 5 }}>Email</span>
+                                    </a>
+                                </Link>
                             </div>
                             <div>cleardh@hotmail.com</div>
                             <div className='resumeSideItemTitle'>
-                                <Image src={linkedin} width={16} height={16} />
-                                <span style={{ marginLeft: 5 }}>LinkedIn</span>
+                                <Link passHref href='https://www.linkedin.com/in/donghakang'>
+                                    <a target='_blank'>
+                                        <Image src={linkedin} width={16} height={16} />
+                                        <span style={{ marginLeft: 5 }}>LinkedIn</span>
+                                    </a>
+                                </Link>
                             </div>
                             <div>https://www.linkedin.com/in/donghakang</div>
                             <div className='resumeSideItemTitle'>
-                                <Image src={github} width={16} height={16} />
-                                <span style={{ marginLeft: 5 }}>GitHub</span>
+                                <Link passHref href='https://github.com/cleardh'>
+                                    <a target='_blank'>
+                                        <Image src={github} width={16} height={16} />
+                                        <span style={{ marginLeft: 5 }}>GitHub</span>
+                                    </a>
+                                </Link>
                             </div>
                             <div>https://github.com/cleardh</div>
                             <div className='resumeSideItemTitle'>
-                                <Icon icon='globe-network' />
-                                <span style={{ marginLeft: 5 }}>Website</span>
+                                <Link passHref href='https://donghakang.com'>
+                                    <a target='_blank'>
+                                        <Icon icon='globe-network' />
+                                        <span style={{ marginLeft: 5 }}>Website</span>
+                                    </a>
+                                </Link>
                             </div>
-                            <div>cleardh.github.io/portfolio</div>
+                            <div>https://donghakang.com</div>
                         </div>
                         <div className='resumeSideItem'>
                             <div className='resumeSectionTitle'>Skills</div>
@@ -193,7 +217,11 @@ const Resume = () => {
                             {getSkill(5)}
                             <div>React/Redux</div>
                             {getSkill(5)}
+                            <div>WebPack</div>
+                            {getSkill(5)}
                             <div>PostgreSQL</div>
+                            {getSkill(5)}
+                            <div>MongoDB</div>
                             {getSkill(5)}
                             <div>REST API</div>
                             {getSkill(5)}
