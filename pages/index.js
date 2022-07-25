@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 1, behavior: 'smooth' });
   }, []);
   return (
     <div>
@@ -27,9 +27,6 @@ export default function Home() {
       </main>
 
       <footer>
-        {/* <hr style={{ width: '90%', marginBottom: 30 }} />
-        Thanks for visiting!<br />
-        Dongha Kang */}
         <Footer />
       </footer>
     </div>
