@@ -4,25 +4,17 @@ on:
         branches: [ main ]
 jobs:
   CI:
-    deploy:
-        runs-on: Ubuntu-20.04
-    strategy: 
-        matrix:
-            node-version: [18.6.0]
+    runs-on: Ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-            node-version: ${{ matrix.node-version }}
+            node-version: 18.6.0
       - run: npm install
       - run: npm run build --if-present
   CD:
-    deploy:
-        runs-on: Ubuntu-20.04
-    strategy: 
-        matrix:
-            node-version: [18.6.0]
+    runs-on: Ubuntu-20.04
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
