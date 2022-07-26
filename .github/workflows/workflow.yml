@@ -15,6 +15,7 @@ jobs:
       - run: npm run build --if-present
   CD:
     runs-on: Ubuntu-20.04
+    needs: [CI]
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
