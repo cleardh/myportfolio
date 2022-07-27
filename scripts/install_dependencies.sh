@@ -4,5 +4,5 @@ export NVM_DIR="/home/ubuntu/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 cd /home/ubuntu/portfolio
-which npm
-npm install --unsafe-perm=true --allow-root
+ls -lh
+npm install --unsafe-perm=true
