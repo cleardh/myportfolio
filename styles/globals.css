@@ -206,6 +206,12 @@ body {
 
 /* Resume */
 
+.resume-download-container {
+  display: flex;
+  width: 100vw;
+  justify-content: center
+}
+
 .resumeDownload {
   width: 300px;
   height: 50px;
@@ -263,6 +269,10 @@ body {
 @media only screen and (max-width: 1000px) {
   .resumeContainer {
     zoom: calc(100vw / 1000 * 100)%;
+  }
+
+  .resume-download-container {
+    display: none;
   }
 }
 

@@ -50,7 +50,7 @@ const Resume = () => {
     }
     return (
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px 0px'}}>
-            <div style={{ width: '100vw', display: 'flex', justifyContent: 'center' }}>
+            <div className='resume-download-container'>
                 <Button type='button' rightIcon='download' className='resumeDownload' intent={Intent.NONE} onClick={downloadPdf}>
                     <span style={{ fontSize: 20, marginRight: 5, color: '#000' }}>Download my resume</span>
                 </Button>
