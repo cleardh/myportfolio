@@ -46,4 +46,4 @@ jobs:
            --deployment-config-name CodeDeployDefault.AllAtOnce \
            --deployment-group-name ${{ matrix.deploy-group }} \
            --file-exists-behavior OVERWRITE \
-           --revision revisionType=Github,gitHubLocation={repository=${{ github.repository }},commitId=${{ github.sha }}}
+           --revision revisionType=Github,gitHubLocation={repository=cleardh/myportfolio,commitId=${{ github.sha }}}
