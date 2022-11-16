@@ -7,17 +7,21 @@ import Link from 'next/link';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
+const resumeWidth = 1000;
 const Resume = () => {
     const resumeToPrint = useRef();
     const [zoomFactor, setZoomFactor] = useState('100%');
     useEffect(() => {
         resizeResume();
         window.addEventListener('resize', resizeResume);
+        return () => {
+            window.removeEventListener('resize', resizeResume);
+        };
     }, []);
     const resizeResume = () => {
         let zoom;
-        if (typeof window === 'undefined' || window.outerWidth > 1000) zoom = '100%';
-        else zoom = `${window.outerWidth / 1000 * 100}%`;
+        if (typeof window === 'undefined' || window.outerWidth > resumeWidth) zoom = '100%';
+        else zoom = `${window.outerWidth / resumeWidth * 100}%`;
         setZoomFactor(zoom);
     }
     const downloadPdf = () => {
@@ -75,13 +79,22 @@ const Resume = () => {
                                     <div>Iris Booth, Remote</div>
                                     <ul className='resumeJobUl'>
                                         <li className='resumeListItems'>
-                                            Maintaining and troubleshooting existing codebase as well as adding new features to apps that were built using technologies including Node.js, React, Redux, JavaScript, TypeScript, and NW.js.
+                                            Tech Stack: Node.js, React, Redux, JavaScript, TypeScript, PostgreSQL, and AWS.
                                         </li>
                                         <li className='resumeListItems'>
-                                            Developed a real-time remote controller app for kiosk using Node.js, React, AWS API Gateway, AWS Lambda and PostgreSQL.
+                                            Developed a real-time remote controller app for photo booths using Node.js, React, AWS API Gateway, AWS Lambda and PostgreSQL.
                                         </li>
                                         <li className='resumeListItems'>
-                                            Managed and maintained booths that are in remote locations using VPN and SSH
+                                            Led major version upgrades that include Node, Webpack, and React
+                                        </li>
+                                        <li className='resumeListItems'>
+                                            Led vulnerability scanning of web server and automated the process
+                                        </li>
+                                        <li className='resumeListItems'>
+                                            Managing booths in remote locations using VPN and SSH
+                                        </li>
+                                        <li className='resumeListItems'>
+                                            Troubleshooting network issues for photo booths
                                         </li>
                                     </ul>
                                 </div>
@@ -100,7 +113,7 @@ const Resume = () => {
                                     </div>
                                         <ul className='resumeAccomplishmentsUl'>
                                             <li className='resumeListItems'>
-                                                An accounting app for my personal use
+                                                An accounting app for personal use
                                             </li>
                                             <li className='resumeListItems'>
                                                 Utilized Next.js for both front and back-end in association with MongoDB
@@ -125,7 +138,7 @@ const Resume = () => {
                                                 Utilized AWS API Gateway WebSocket API and Lambda in association with Node.js and React
                                             </li>
                                             <li className='resumeListItems'>
-                                                Can be access by scanning a QR code on kiosk
+                                                Can be access by scanning a QR code on photo booths
                                             </li>
                                         </ul>
                                 </div>
