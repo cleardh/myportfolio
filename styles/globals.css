@@ -1,3 +1,7 @@
+:root {
+  --resume-width: 1020px;
+}
+
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -116,8 +120,9 @@ body {
 .aboutWrapper {
   font-size: 30px;
   word-break: break-word;
-  width: 100%;
   height: 400px;
+  box-shadow: 2px 2px 20px #626262;
+  padding: 30px;
   text-shadow: 2px 2px grey;
   text-align: left;
   line-height: 100px;
@@ -184,7 +189,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1000px
+  width: 1000px;
 }
 
 .achievements-title {
@@ -241,8 +246,8 @@ body {
 }
 
 .resumeContainer {
-  width: 1000px;
-  height: calc(1.414516129032258 * 1000px);
+  width: var(--resume-width);
+  height: calc(1.414516129032258 * var(--resume-width));
   font-size: 15px;
   letter-spacing: 1px;
   font-weight: 300;
@@ -254,7 +259,7 @@ body {
 
 @media only screen and (max-width: 500px) {
   .resumeContainer {
-    height: calc(1.414516129032258 * 1000px + 200px);
+    height: calc(1.414516129032258 * var(--resume-width) + 200px);
   }
 
   .aboutLeftWrapper {
@@ -266,10 +271,10 @@ body {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .resumeContainer {
+@media only screen and (max-width: 1200px) {
+  /* .resumeContainer {
     zoom: calc(100vw / 1000 * 100)%;
-  }
+  } */
 
   .resume-download-container {
     display: none;
