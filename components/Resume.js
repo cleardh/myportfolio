@@ -107,7 +107,7 @@ const Resume = () => {
                                 <div className='resumeAccomplishmentsDetails'>
                                     <div className='resumeAccomplishmentsTitle'>
                                         <Icon icon='star' style={{ marginRight: 5 }} />
-                                        <Link passHref href='https://gageiboo.herokuapp.com'>
+                                        <Link passHref href='https://gageiboo.vercel.app'>
                                             <a className='resumeLink' target='_blank'>gageiboo</a>
                                         </Link>
                                     </div>
