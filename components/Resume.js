@@ -85,10 +85,10 @@ const Resume = () => {
                                             Developed a real-time remote controller app for photo booths using Node.js, React, AWS API Gateway, AWS Lambda and PostgreSQL.
                                         </li>
                                         <li className='resumeListItems'>
-                                            Led major version upgrades that include Node, Webpack, and React
+                                            Performed major version upgrades that include Node, Webpack, and React
                                         </li>
                                         <li className='resumeListItems'>
-                                            Led vulnerability scanning of web server and automated the process
+                                            Performed vulnerability scanning of web server and automated the process
                                         </li>
                                         <li className='resumeListItems'>
                                             Managing booths in remote locations using VPN and SSH
