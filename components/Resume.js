@@ -35,22 +35,13 @@ const Resume = () => {
             pdf.output('dataurlnewwindow');
         }).catch(err => console.log(err));
     }
-    const getSkill = (level) => {
-        if (level > 5) level = 5;
-        const levelArray = [];
-        for (let i = 0; i < level; i++) {
-            levelArray.push('full-circle');
-        }
-        for (let i = 0; i < 5 - level; i++) {
-            levelArray.push('Circle');
-        }
+    const getSkill = (skill) => {
         return (
-            <div>
-                {levelArray.map((l, i) => (
-                    <Icon key={i} icon={l} style={{ marginRight: 5 }} />
-                ))}
+            <div style={{ marginBottom: 10 }}>
+                <Icon icon='full-circle' size={12} style={{ marginRight: 5 }} />
+                <span>{skill}</span>
             </div>
-        )
+        );
     }
     return (
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px 0px'}}>
@@ -67,7 +58,9 @@ const Resume = () => {
                 <div className='resumeBody'>
                     <div className='resumeMain'>
                         <div className='resumeIntro'>
-                            Well-qualified software developer familiar with JavaScript frameworks and libraries. Detail-oriented and active learner who always keep automation in mind. Collaborative team player with excellent technical abilities offering 6 years of web development experience.
+                            Well-qualified software developer, specializing in JavaScript programming language. 
+                            Detail-oriented and active learner who always keeps automation in mind. 
+                            Collaborative team player with excellent technical abilities offering 3 years of professional full-stack web development experience.
                         </div>
                         <div className='resumeWorkHistory'>
                             <div className='resumeSectionTitle'>Work History</div>
@@ -79,22 +72,22 @@ const Resume = () => {
                                     <div>Iris Booth, Remote</div>
                                     <ul className='resumeJobUl'>
                                         <li className='resumeListItems'>
-                                            Tech Stack: Node.js, React, Redux, JavaScript, TypeScript, PostgreSQL, and AWS.
+                                            Tech Stack: Node.js(Express), React, Redux, JavaScript, TypeScript, PostgreSQL, and AWS
                                         </li>
                                         <li className='resumeListItems'>
-                                            Developed a real-time remote controller app for photo booths using Node.js, React, AWS API Gateway, AWS Lambda and PostgreSQL.
+                                            Develop a real-time remote controller app for photo booths using Node.js(Express), React, AWS API Gateway, AWS Lambda and PostgreSQL
                                         </li>
                                         <li className='resumeListItems'>
-                                            Performed major version upgrades that include Node, Webpack, and React
+                                            Create and maintain API
                                         </li>
                                         <li className='resumeListItems'>
-                                            Performed vulnerability scanning of web server and automated the process
+                                            Perform major version upgrades that include Node, Webpack, and React
                                         </li>
                                         <li className='resumeListItems'>
-                                            Managing booths in remote locations using VPN and SSH
+                                            Perform vulnerability scanning of web server and automate the process
                                         </li>
                                         <li className='resumeListItems'>
-                                            Troubleshooting network issues for photo booths
+                                            Manage booths in remote locations using VPN and SSH
                                         </li>
                                     </ul>
                                 </div>
@@ -226,26 +219,20 @@ const Resume = () => {
                         <div className='resumeSideItem'>
                             <div className='resumeSectionTitle'>Skills</div>
                             <hr />
-                            <div>Node.js</div>
-                            {getSkill(5)}
-                            <div>React/Redux</div>
-                            {getSkill(5)}
-                            <div>WebPack</div>
-                            {getSkill(5)}
-                            <div>PostgreSQL</div>
-                            {getSkill(5)}
-                            <div>MongoDB</div>
-                            {getSkill(5)}
-                            <div>REST API</div>
-                            {getSkill(5)}
-                            <div>Web Socket</div>
-                            {getSkill(5)}
-                            <div>AWS</div>
-                            {getSkill(5)}
-                            <div>Linux</div>
-                            {getSkill(5)}
-                            <div>Raspberry Pi</div>
-                            {getSkill(5)}
+                            {getSkill('Node.js(Express.js)')}
+                            {getSkill('React/Redux')}
+                            {getSkill('WebPack')}
+                            {getSkill('PostgreSQL')}
+                            {getSkill('MongoDB')}
+                            {getSkill('REST API')}
+                            {getSkill('Web Socket')}
+                            {getSkill('Linux')}
+                            {getSkill('AWS EC2')}
+                            {getSkill('AWS S3')}
+                            {getSkill('AWS CloudWatch')}
+                            {getSkill('AWS Lambda')}
+                            {getSkill('AWS API Gateway')}
+                            {getSkill('Docker')}
                         </div>
                     </div>
                 </div>

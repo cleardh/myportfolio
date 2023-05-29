@@ -118,6 +118,7 @@ body {
 /* About */
 
 .aboutWrapper {
+  background: #d5d5d5;
   font-size: 30px;
   word-break: break-word;
   height: 400px;
