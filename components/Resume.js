@@ -81,13 +81,13 @@ const Resume = () => {
                                             Create and maintain API
                                         </li>
                                         <li className='resumeListItems'>
+                                            Manage CI/CD process using AWS CodeDeploy
+                                        </li>
+                                        <li className='resumeListItems'>
                                             Perform major version upgrades that include Node, Webpack, and React
                                         </li>
                                         <li className='resumeListItems'>
-                                            Perform vulnerability scanning of web server and automate the process
-                                        </li>
-                                        <li className='resumeListItems'>
-                                            Manage booths in remote locations using VPN and SSH
+                                            Provides maintenance to booths in remote locations using VPN and SSH
                                         </li>
                                     </ul>
                                 </div>
