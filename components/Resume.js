@@ -37,7 +37,7 @@ const Resume = () => {
     }
     const getSkill = (skill) => {
         return (
-            <div style={{ marginBottom: 10 }}>
+            <div style={{ marginBottom: 5 }}>
                 <Icon icon='full-circle' size={12} style={{ marginRight: 5 }} />
                 <span>{skill}</span>
             </div>
@@ -53,7 +53,7 @@ const Resume = () => {
             <div className='resumeContainer' ref={resumeToPrint} style={{ zoom: zoomFactor }}>
                 <div className='resumeHeader'>
                     <div style={{ fontSize: 45 }}>Dongha Kang</div>
-                    <div>JavaScript Developer</div>
+                    <div>Full-stack Developer</div>
                 </div>
                 <div className='resumeBody'>
                     <div className='resumeMain'>
@@ -233,6 +233,16 @@ const Resume = () => {
                             {getSkill('AWS Lambda')}
                             {getSkill('AWS API Gateway')}
                             {getSkill('Docker')}
+                        </div>
+                        <div className='resumeSideItem'>
+                            <div className='resumeSectionTitle'>References</div>
+                            <hr />
+                            <div style={{ marginBottom: 5 }}>
+                                <div>Name: JungSang Cho</div>
+                                <div>Nickname: Jason Cho</div>
+                                <div>Business Title: Senior Full-stack Software Engineer</div>
+                                <div>Department: DIGITAL INITIATIVES</div>
+                            </div>
                         </div>
                     </div>
                 </div>
