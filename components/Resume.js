@@ -37,7 +37,7 @@ const Resume = () => {
     }
     const getSkill = (skill) => {
         return (
-            <div style={{ marginBottom: 5 }}>
+            <div style={{ marginBottom: 10 }}>
                 <Icon icon='full-circle' size={12} style={{ marginRight: 5 }} />
                 <span>{skill}</span>
             </div>
@@ -234,7 +234,7 @@ const Resume = () => {
                             {getSkill('AWS API Gateway')}
                             {getSkill('Docker')}
                         </div>
-                        <div className='resumeSideItem'>
+                        {/* <div className='resumeSideItem'>
                             <div className='resumeSectionTitle'>References</div>
                             <hr />
                             <div style={{ marginBottom: 5 }}>
@@ -243,7 +243,7 @@ const Resume = () => {
                                 <div>Business Title: Senior Full-stack Software Engineer</div>
                                 <div>Department: DIGITAL INITIATIVES</div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
