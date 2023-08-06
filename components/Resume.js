@@ -162,15 +162,6 @@ const Resume = () => {
                             <div className='resumeSectionTitle'>Contact</div>
                             <hr />
                             <div className='resumeSideItemTitle'>
-                                <Link passHref href='https://www.google.com/maps/place/North,+251+Margaret+Ave,+Kitchener,+ON+N2H+4J6/@43.4631437,-80.4967428,17z/data=!3m1!4b1!4m5!3m4!1s0x882bf4861270928d:0xc98adbc032bfeb73!8m2!3d43.4631398!4d-80.4945541'>
-                                    <a target='_blank'>
-                                        <Icon icon='home' />
-                                        <span style={{ marginLeft: 5 }}>Address</span>
-                                    </a>
-                                </Link>
-                            </div>
-                            <div>251 Margaret Ave, Kitchener, ON, N2H 4J6</div>
-                            <div className='resumeSideItemTitle'>
                                 <Link passHref href='tel:519-505-5699'>
                                     <a>
                                         <Icon icon='phone' />
